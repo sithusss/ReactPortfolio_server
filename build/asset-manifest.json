@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b098f5c0.css",
+    "main.js": "/static/js/main.c41f913d.js",
+    "static/js/488.21a3b654.chunk.js": "/static/js/488.21a3b654.chunk.js",
+    "static/media/announcing.jpg": "/static/media/announcing.2dd7218c26b49817be1f.jpg",
+    "static/media/tec2.jpg": "/static/media/tec2.5aaf5c8221c0d9ae0355.jpg",
+    "static/media/leader1.jpg": "/static/media/leader1.c43e93547eab3960cf19.jpg",
+    "static/media/karate.jpg": "/static/media/karate.4d1a6ae8c5b90f4a93fc.jpg",
+    "static/media/tech1.jpg": "/static/media/tech1.ef75f0c5b6e9337abfe1.jpg",
+    "static/media/react.png": "/static/media/react.becbab0ab5d2271d2831.png",
+    "static/media/mongo.png": "/static/media/mongo.6170bacefd8a1f69ca74.png",
+    "static/media/jwt.png": "/static/media/jwt.a36e87725e668be078a6.png",
+    "static/media/css.png": "/static/media/css.ea63097553654f07d95c.png",
+    "static/media/leader2.jpg": "/static/media/leader2.9da90684a6ec0d9eefcb.jpg",
+    "static/media/sql-server.png": "/static/media/sql-server.a4ba4125aadc50241c26.png",
+    "static/media/ieee.png": "/static/media/ieee.1e39cd81c3d416fdcb3c.png",
+    "static/media/python.png": "/static/media/python.6a5cbc319ab3ddf8ef92.png",
+    "static/media/php.png": "/static/media/php.4990580e9b615aeebb1f.png",
+    "static/media/git.png": "/static/media/git.bad2b1118eff814bb319.png",
+    "static/media/mysql.png": "/static/media/mysql.4610cbabbff468ff8ae3.png",
+    "static/media/java.png": "/static/media/java.ddf8676bd569fe01ab44.png",
+    "static/media/Sandali Liyanage.jpg": "/static/media/Sandali Liyanage.b1262a6c4d8fb7b67519.jpg",
+    "static/media/clickup.png": "/static/media/clickup.29c739a2b0b3431923ea.png",
+    "static/media/Rotaract.png": "/static/media/Rotaract.1c85aa977fdf57932bfb.png",
+    "static/media/jira.png": "/static/media/jira.08d3740a6567ac7ed8ad.png",
+    "static/media/c++.png": "/static/media/c++.977f47e8bcd39d7f2f8f.png",
+    "static/media/numpy.png": "/static/media/numpy.905c14f52eb66ffce57e.png",
+    "static/media/html-5.png": "/static/media/html-5.b2db3a7f6897f0a6e75c.png",
+    "static/media/sqlite.png": "/static/media/sqlite.9cfee87f73f694ef4edc.png",
+    "index.html": "/index.html",
+    "main.b098f5c0.css.map": "/static/css/main.b098f5c0.css.map",
+    "main.c41f913d.js.map": "/static/js/main.c41f913d.js.map",
+    "488.21a3b654.chunk.js.map": "/static/js/488.21a3b654.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b098f5c0.css",
+    "static/js/main.c41f913d.js"
+  ]
+}
