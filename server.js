@@ -12,6 +12,7 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const buildPath = path.join(__dirname,'ReactPrtfolio_front','build');
 
 
 dotenv.config();
@@ -36,11 +37,11 @@ app.use('/api/projects', projectRoutes);
 app.use("/api/contact", contactRoutes);
 
 // Serve React static files
-app.use(express.static(path.join(__dirname, 'ReactPortfolio_front', 'build')));
+app.use(express.static(path.join(buildPath)));
 
-// For any other route, send back React's index.html
+// All remaining requests return the React app
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'ReactPortfolio_front', 'build', 'index.html'));
+  res.sendFile(path.join(buildPath,'index.html'));
 });
 
 
