@@ -32,9 +32,12 @@ app.use('/api/education', educationRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/contact', contactRoutes);
 
-// Fallback for unknown routes (optional)
-app.use((req, res) => {
-  res.status(404).json({ message: 'Route not found' });
+// 👉 Serve static files from the React app build
+app.use(express.static(path.join(__dirname, 'build')));
+
+// 👉 Serve React app for all unmatched routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 // Start Server
