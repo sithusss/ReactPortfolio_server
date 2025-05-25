@@ -35,5 +35,14 @@ app.use('/api/education', educationRoutes);
 app.use('/api/projects', projectRoutes);
 app.use("/api/contact", contactRoutes);
 
+// Serve React static files
+app.use(express.static(path.join(__dirname, 'ReactPortfolio_front', 'build')));
+
+// For any other route, send back React's index.html
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'ReactPortfolio_front', 'build', 'index.html'));
+});
+
+
 // Start Server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
