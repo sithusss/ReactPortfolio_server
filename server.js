@@ -12,8 +12,6 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const buildPath = path.join(__dirname,'ReactPrtfolio_front','build');
-
 
 dotenv.config();
 
@@ -27,23 +25,17 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Connect to MongoDB
 connectDB();
-//mongoose.connect('mongodb://localhost:27017/portfolio');
 
-
-// Routes
+// API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/education', educationRoutes);
 app.use('/api/projects', projectRoutes);
-app.use("/api/contact", contactRoutes);
+app.use('/api/contact', contactRoutes);
 
-// Serve React static files
-app.use(express.static(path.join(buildPath)));
-
-// All remaining requests return the React app
-app.get('*', (req, res) => {
-  res.sendFile(path.join(buildPath,'index.html'));
+// Fallback for unknown routes (optional)
+app.use((req, res) => {
+  res.status(404).json({ message: 'Route not found' });
 });
-
 
 // Start Server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
