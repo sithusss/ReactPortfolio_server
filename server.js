@@ -18,8 +18,12 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware
-app.use(cors());
+// ✅ Allow frontend requests from Netlify
+app.use(cors({
+  origin: 'https://sandaliportfolio.netlify.app',
+  credentials: true
+}));
+
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
@@ -31,14 +35,6 @@ app.use('/api/auth', authRoutes);
 app.use('/api/education', educationRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/contact', contactRoutes);
-
-// 👉 Serve static files from the React app build
-app.use(express.static(path.join(__dirname, 'build')));
-
-// 👉 Serve React app for all unmatched routes
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
 
 // Start Server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
