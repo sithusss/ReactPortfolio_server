@@ -36,5 +36,11 @@ app.use('/api/education', educationRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/contact', contactRoutes);
 
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 // Start Server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
