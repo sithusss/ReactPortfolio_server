@@ -13,6 +13,7 @@ if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir);
 }
 
+
 // Storage config
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -25,7 +26,18 @@ const storage = multer.diskStorage({
   }
 });
 
-const upload = multer({ storage });
+const fileFilter = (req, file, cb) => {
+  if (
+    file.mimetype.startsWith('image/') ||
+    file.mimetype.startsWith('video/')
+  ) {
+    cb(null, true);
+  } else {
+    cb(new Error('Only image and video files are allowed!'), false);
+  }
+};
+
+const upload = multer({ storage, fileFilter });
 
 // Get all educations
 router.get('/', async (req, res) => {
